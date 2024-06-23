@@ -1,0 +1,36 @@
+1.CREATE DATABASE myshop;
+
+2.CREATE TABLE `users` ( 
+  `id ` INT AUTO_INCREMENT,
+  `name` VARCHAR(255),
+  `email` VARCHAR(255),
+  `password` VARCHAR(255),
+  `PRIMARY KEY(`id`)
+);
+CREATE TABLE `categories` ( 
+  `id` INT AUTO_INCREMENT,
+  `name` VARCHAR(255),
+  `PRIMARY KEY(`id`)
+);
+CREATE TABLE `items` ( 
+  `id` INT AUTO_INCREMENT,
+  `name` VARCHAR(255),
+  `description` VARCHAR(255),
+  `price` INT,
+  `stock` INT,
+  `category_id` INT,
+   PRIMARY KEY (`id`)
+);
+ALTER TABLE `items` ADD CONSTRAINT `FK_items_category_id` FOREIGN KEY (`category_id`) REFERENCES `undefined` (`undefined`);
+
+3.INSERT INTO 'users' ('name','email')VALUES('John Doe','john@doe.com'),('Jane Doe','jane@doe.com'),
+  INSERT INTO 'categories' ('name')VALUES('gadget','cloth','men','women','branded'),
+  INSERT INTO 'items' ('name','description')VALUES('sumsang b50','hape keren dari merk sumsang'),('uniklooh','baju keren dari brand     
+  ternama'),('IMHO watch','jam tangan anak yang jujur banget')
+
+4.SELECT id.name.email FROM USERS;
+  SELECT price->1000000 FROM ITEMS;
+  SELECT name FROM items WHERE watch;
+  SELECT * FROM categories INNER items JOIN items WHERE watch;
+ 
+5.UPDATE items WHERE nama = 'sumsangb50' SET price = 25000000;
